@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:rick_and_morty_tdd/core/usecases/usecase.dart';
 import 'package:rick_and_morty_tdd/features/rick_and_morty/domain/entities/character.dart';
 import 'package:rick_and_morty_tdd/features/rick_and_morty/domain/entities/character_location.dart';
 import 'package:rick_and_morty_tdd/features/rick_and_morty/domain/repositories/character_repository.dart';
@@ -22,7 +23,7 @@ void main() {
     origin: CharacterLocation(name: 'teste', url: ''),
     location: CharacterLocation(name: 'teste', url: ''),
     image: 'image',
-    episode: [],
+    episode: const [],
     url: 'url',
     created: DateTime(2022),
   );
@@ -33,7 +34,7 @@ void main() {
     when(() => mockCharacterRepository.getAllCharacter())
         .thenAnswer((_) async => Right(tListCharacter));
 
-    final result = await usecase.call();
+    final result = await usecase(NoParams());
 
     expect(result, Right(tListCharacter));
 

@@ -22,18 +22,18 @@ void main() {
     origin: CharacterLocation(name: 'teste', url: ''),
     location: CharacterLocation(name: 'teste', url: ''),
     image: 'image',
-    episode: [],
+    episode: const [],
     url: 'url',
     created: DateTime(2022),
   );
 
-  final tNumber = 1;
+  const tNumber = 1;
 
   test('Shoul return a single character', () async {
     when(() => mockCharacterRepository.getSingleCharacter(tNumber))
         .thenAnswer((_) async => Right(tCharacter));
 
-    final result = await usecase.call(tNumber);
+    final result = await usecase(const Params(id: tNumber));
 
     expect(result, Right(tCharacter));
 
