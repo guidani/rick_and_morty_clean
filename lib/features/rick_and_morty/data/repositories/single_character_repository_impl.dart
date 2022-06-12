@@ -10,8 +10,8 @@ import 'package:rick_and_morty_tdd/features/rick_and_morty/domain/repositories/s
 typedef _singleCharacter = Future<Character> Function();
 
 class SingleCharacterRepositoryImpl extends SingleCharacterRepository {
-  final CharacterRemoteDataSource characterRemoteDataSource;
-  final CharacterLocalDataSource characterLocalDataSource;
+  final SingleCharacterRemoteDataSource characterRemoteDataSource;
+  final SingleCharacterLocalDataSource characterLocalDataSource;
   final NetworkInfo networkInfo;
 
   SingleCharacterRepositoryImpl(
