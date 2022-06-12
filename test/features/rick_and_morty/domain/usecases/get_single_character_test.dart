@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:rick_and_morty_tdd/features/rick_and_morty/domain/entities/character.dart';
-import 'package:rick_and_morty_tdd/features/rick_and_morty/domain/repositories/character_repository.dart';
+import 'package:rick_and_morty_tdd/features/rick_and_morty/domain/repositories/single_character_repository.dart';
 import 'package:rick_and_morty_tdd/features/rick_and_morty/domain/usecases/get_single_character.dart';
 
-class MockCharacterRepository extends Mock implements CharacterRepository {}
+class MockCharacterRepository extends Mock implements SingleCharacterRepository {}
 
 void main() {
   final mockCharacterRepository = MockCharacterRepository();
