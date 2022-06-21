@@ -32,14 +32,16 @@ class CharacterModel extends Character {
         url: json["url"],
       );
 
-  Map<String, dynamic> toJson() => {
-        "id": id,
-        "name": name,
-        "status": status,
-        "species": species,
-        "type": type,
-        "gender": gender,
-        "image": image,
-        "url": url,
-      };
+  Map<String, dynamic> toJson() {
+    return {
+      "id": id,
+      "name": name,
+      "status": status,
+      "species": species,
+      "type": type,
+      "gender": gender,
+      "image": image,
+      "url": url,
+    };
+  }
 }
