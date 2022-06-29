@@ -19,8 +19,8 @@ jobs:
       - run: flutter --version
       - name: Restore Packages
         run: flutter pub get
-      - name: Analyse
-        run: flutter analyze
+      # - name: Analyse
+      #   run: flutter analyze
 
       - name: Run tests
         run: flutter test --coverage
