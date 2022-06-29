@@ -16,7 +16,7 @@ jobs:
         with:
           flutter-version: '3.0.2'
           channel: 'stable'
-        run: flutter --version
+      - run: flutter --version
       - name: Restore Packages
         run: flutter pub get
       - name: Analyse
